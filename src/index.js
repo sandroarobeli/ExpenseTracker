@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "normalize.css"; // Standardizes 4 all browsers
+import "./styles/styles.scss";
 import * as serviceWorker from "./serviceWorker";
+import AppRouter from "./routers/AppRouter";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Expense Tracker</h1>
+    <AppRouter />
   </React.StrictMode>,
   document.getElementById("root")
 );
