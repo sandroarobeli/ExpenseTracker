@@ -1,0 +1,14 @@
+/*
+ 1. With create-react-app ecosystem, all I need is 
+ yarn add sass-loader and node-sass, Webpack will
+ take care of config part on its own.
+ 2. styles.scss imports all the partials that are 
+ responsible for styling each element/module
+ (It serves like a style file aggregator).
+ Then index.js imports styles.scss itself
+*/
+// Settings _partial has to come firsts,
+// So other files know what those variables
+// Stand for
+@import "./base/settings";
+@import "./base/base";
