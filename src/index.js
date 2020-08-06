@@ -4,11 +4,16 @@ import "normalize.css"; // Standardizes 4 all browsers
 import "./styles/styles.scss";
 import * as serviceWorker from "./serviceWorker";
 import AppRouter from "./routers/AppRouter";
+import { Provider } from "react-redux";
+import "react-dates/initialize";
+import configureStore from "./store/configureStore";
+
+const store = configureStore();
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <AppRouter />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
 
