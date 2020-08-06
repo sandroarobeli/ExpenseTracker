@@ -1,5 +1,5 @@
 import React from "react";
 
-const HelpPage = () => <div>This is from my HELP expense component</div>;
+const HelpPage = () => <div>THIS IS MY HELP PAGE </div>;
 
 export default HelpPage;

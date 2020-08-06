@@ -1,18 +1,37 @@
 {
   "name": "expense-tracker",
+  "author": "Alex Arobelidze",
+  "description": "creating, managing, editing expense entries through different personalized user accounts",
+  "keywords": [
+    "database",
+    "authentication",
+    "user login",
+    "scss",
+    "redux"
+  ],
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandroarobeli/expense-tracker"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "moment": "^2.27.0",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
+    "react-dates": "^21.8.0",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "sass-loader": "^9.0.3"
+    "redux": "^4.0.5",
+    "sass-loader": "^9.0.3",
+    "uuid": "^8.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
