@@ -4,6 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
+# Let's see how this works with Heroku
+# Delete if anything
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
 
 # testing
 /coverage
