@@ -7,6 +7,7 @@ import AppRouter from "./routers/AppRouter";
 import { Provider } from "react-redux";
 import "react-dates/initialize";
 import configureStore from "./store/configureStore";
+import "./firebase/firebase";
 
 const store = configureStore();
 
