@@ -15,38 +15,40 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref("expenses").on(
-  "value",
-  (snapshot) => {
-    const expenses = [];
-    snapshot.forEach((childSnapshot) => {
-      expenses.push({
-        id: childSnapshot.key,
-        ...childSnapshot.val(),
-      });
-    });
-  },
-  (error) => {
-    console.log("Error ocurred: ", error);
-  }
-);
-setTimeout(() => {
-  database.ref("expenses").push({
-    description: "Expense NEW",
-    note: "TESTING...",
-    amount: 696969,
-    createdAt: 6900,
-  });
-}, 5000);
-setTimeout(() => {
-  database.ref("expenses/-MEU45ud7PKCUd8tRPFp").update({
-    description: "UPDATED MEMBER",
-    note: "TESTING DATABASE",
-  });
-}, 10000);
-setTimeout(() => {
-  database.ref("expenses/-MEU45uoT_Y9VKuo-ZHW").remove();
-}, 15000);
+export { firebase, database as default };
+
+// database.ref("expenses").on(
+//   "value",
+//   (snapshot) => {
+//     const expenses = [];
+//     snapshot.forEach((childSnapshot) => {
+//       expenses.push({
+//         id: childSnapshot.key,
+//         ...childSnapshot.val(),
+//       });
+//     });
+//   },
+//   (error) => {
+//     console.log("Error ocurred: ", error);
+//   }
+// );
+// setTimeout(() => {
+//   database.ref("expenses").push({
+//     description: "Expense NEW",
+//     note: "TESTING...",
+//     amount: 696969,
+//     createdAt: 6900,
+//   });
+// }, 5000);
+// setTimeout(() => {
+//   database.ref("expenses/-MEU45ud7PKCUd8tRPFp").update({
+//     description: "UPDATED MEMBER",
+//     note: "TESTING DATABASE",
+//   });
+// }, 10000);
+// setTimeout(() => {
+//   database.ref("expenses/-MEU45uoT_Y9VKuo-ZHW").remove();
+// }, 15000);
 
 // database.ref("notes").push({
 //   title: "title 1",
