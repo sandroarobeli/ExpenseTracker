@@ -8,15 +8,20 @@ import { Provider } from "react-redux";
 import "react-dates/initialize";
 import configureStore from "./store/configureStore";
 import "./firebase/firebase";
+import { startSetExpenses } from "./actions/expenses";
 
 const store = configureStore();
 
-ReactDOM.render(
+const jsx = (
   <Provider store={store}>
     <AppRouter />
-  </Provider>,
-  document.getElementById("root")
+  </Provider>
 );
+ReactDOM.render(<h3>Loading...</h3>, document.getElementById("root"));
+
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, document.getElementById("root"));
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
